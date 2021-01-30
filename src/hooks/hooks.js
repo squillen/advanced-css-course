@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import { hotels } from '../helpers/sampleData.js'
+import { hotels, users } from '../helpers/sampleData.js'
 
-export default function useHotelRatings(id) {
+export function useHotelRatings(id) {
   const [hotelRatings, setHotelRatings] = useState({})
 
   useEffect(() => {
@@ -15,4 +15,11 @@ export default function useHotelRatings(id) {
     setHotelRatings(hotel)
   }, [id])
   return hotelRatings
+}
+
+export function useUserReviews(arrayOfIDs) {
+  // make request to DB to find users with matching IDs
+  // users.find({ $in: arrayOfIDs })
+
+  return users.filter(u =>  arrayOfIDs.includes(u._id))
 }

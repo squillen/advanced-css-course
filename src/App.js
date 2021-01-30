@@ -1,12 +1,14 @@
 import './App.scss';
 import Header from './Header'
-import Nav from './Nav'
+import Main from './Main'
+import { getUserFromStorage } from './helpers/userHelpers'
 
 function App() {
+  const user = getUserFromStorage()
   return (
     <div className="app">
-      <Header />
-      <Nav />
+      <Header user={user} />
+      <Main user={user}/>
     </div>
   );
 }

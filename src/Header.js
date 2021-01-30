@@ -1,4 +1,4 @@
-export default function Header() {
+export default function Header({ user }) {
   return (
     <header className="header">
       <img src="img/logo.png" alt="logo" className="logo" />
@@ -25,7 +25,7 @@ export default function Header() {
         </div>
         <div className="user-nav__user">
           <img src="img/user.jpg" alt="user" className="user-nav__user-photo"/>
-          <span className="user-nav__user-name">Sean</span>
+          <span className="user-nav__user-name">{user.name}</span>
         </div>
       </nav>
     </header>

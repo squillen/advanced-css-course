@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import HotelInfo from './HotelInfo'
-import { sampleHotel, links } from './helpers/sampleData.js'
+import { links } from './helpers/sampleData.js'
 
 export default function Nav() {
   const [activeLink, setActiveLink] = useState(links[0].ref)
@@ -29,7 +28,6 @@ export default function Nav() {
           &copy; 2021 SRQus, All rights reserved.
         </div>
       </nav>
-      <HotelInfo hotel={sampleHotel} />
     </div>       
   )
 }

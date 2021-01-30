@@ -1,6 +1,6 @@
-export default function makeSVG({ className = "side-nav__icon", ref }) {
+export default function makeSVG({ key, className = "side-nav__icon", ref }) {
   return (
-    <svg className={className}>
+    <svg key={key} className={className}>
       <use xlinkHref={`img/sprite.svg#${ref}`} />
     </svg>
   )
